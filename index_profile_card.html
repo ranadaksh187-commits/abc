@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Profile Card</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins','Segoe UI',sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background: linear-gradient(135deg,#c3ecf7,#f5d0fe,#fde68a);
+  background-size:400% 400%;
+  animation:bgMove 20s ease infinite;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+@keyframes bgMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* Card */
+.card{
+  width:520px;
+  padding:34px;
+  background:rgba(255,255,255,0.75);
+  backdrop-filter:blur(14px);
+  border-radius:24px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.15);
+}
+
+/* Header */
+.header{
+  text-align:center;
+  margin-bottom:26px;
+}
+
+.header h1{
+  font-size:40px;
+  font-weight:600;
+  color:#1e293b;
+}
+
+.header p{
+  font-size:18px;
+  color:#475569;
+}
+
+/* Content */
+.content{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.name{
+  text-align:center;
+  font-size:30px;
+  font-weight:600;
+  color:#0f172a;
+}
+
+.uid{
+  text-align:center;
+  font-size:16px;
+  font-weight:600;
+  color:#6d28d9;
+}
+
+/* Info Grid */
+.info{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-top:8px;
+}
+
+.info div{
+  background:linear-gradient(135deg,#e0f2fe,#fce7f3);
+  padding:16px;
+  border-radius:16px;
+  font-size:16px;
+  color:#1f2937;
+  box-shadow:0 8px 16px rgba(0,0,0,0.08);
+}
+
+/* Skills */
+.skills-title{
+  text-align:center;
+  font-size:20px;
+  font-weight:600;
+  margin-top:10px;
+  color:#1e293b;
+}
+
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+}
+
+.skills span{
+  padding:12px 24px;
+  font-size:15px;
+  font-weight:500;
+  border-radius:999px;
+  background:linear-gradient(135deg,#60a5fa,#a78bfa);
+  color:white;
+  box-shadow:0 8px 18px rgba(0,0,0,0.15);
+  transition:0.3s;
+}
+
+.skills span:hover{
+  transform:translateY(-4px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <div class="header">
+    <h1>Hello 👋</h1>
+    <p>my name is</p>
+  </div>
+
+  <div class="content">
+    <div class="name">Daksh Pratap Singh</div>
+    <div class="uid">UID · 24BAI70838</div>
+
+    <div class="info">
+      <div>🎓 Undergrad Software Engineering Student</div>
+      <div>🏫 Chandigarh University</div>
+      <div>📧 ranadaksh187@gmail.com</div>
+      <div>📞 6230921269</div>
+    </div>
+
+    <div class="skills-title">Skills</div>
+    <div class="skills">
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JavaScript</span>
+      <span>UI / UX</span>
+      <span>React</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
